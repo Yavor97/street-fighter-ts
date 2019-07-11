@@ -1,0 +1,23 @@
+{
+    "typeAcquisition": {
+        "enable": false
+    },
+    "compilerOptions": {
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "target": "es6",
+        "sourceMap": true,
+        "declaration": false,
+        "removeComments": true,
+        "listFiles": false,
+        "outDir": "out",
+        "noResolve": false
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

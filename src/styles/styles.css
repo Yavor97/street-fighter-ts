@@ -1,0 +1,167 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#cover-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9000;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 0.3;
+}
+
+#prompt-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#prompt-form-container:before {
+    display: inline-block;
+    height: 100%;
+    content: '';
+    vertical-align: middle;
+}
+
+#prompt-form {
+    display: inline-block;
+    padding: 5px 5px 5px 5px;
+    width: 200px;
+    border: 1px solid blueviolet;
+    vertical-align: middle;
+    border-radius: 5px;
+    background: white;
+}
+
+.btn, #prompt-form>input {
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid blueviolet;
+    padding: 5px;
+    margin: 5px;
+}
+
+.btn, #prompt-form>input[type="button"] {
+    background: blueviolet;
+    color: white;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.fighters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    height: 85%;
+}
+
+.fighter {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.fighter:hover {
+    box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+}
+
+.name {
+    align-self: center;
+    font-size: 21px;
+    margin-top: 20px;
+}
+
+.fighter-image {
+    height: 260px;
+}
+
+#loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    visibility: hidden;
+}
+
+.progress-bar {
+    width: 40%;
+    margin: 20px;
+}
+
+progress {
+    border: 0;
+    height: 20px;
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 10px;
+    background: #f55757;
+}
+
+progress::-moz-progress-bar {
+    border-radius: 5px;
+    background: #ff7c6b;
+}
+
+.btn {
+    width: 80%;
+    font-size: 30px;
+    font-weight: bold;
+    height: 60px;
+    align-self: start;
+}
+
+#fight {
+    width: 400px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.battle {
+    width: 80%;
+    background: url(https://i.pinimg.com/originals/52/60/db/5260dbc1bad2db6fc87c7af1e6da98ef.jpg);
+    background-size: cover;
+    justify-content: center;
+}
+
+@media(min-width:1300px) {
+    .progress-bar {
+        margin: 20px 40px 40px 40px;
+    }
+}
